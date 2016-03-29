@@ -19,6 +19,7 @@ public class SettingsActivity  extends PreferenceActivity implements Preference.
         //setContentView(R.layout.activity_settings);
         addPreferencesFromResource(R.xml.pref_general);
         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_location_key)));
+        bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_units_key)));
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -30,7 +31,7 @@ public class SettingsActivity  extends PreferenceActivity implements Preference.
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+         getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
     }
     private void bindPreferenceSummaryToValue(Preference preference) {
         // Set the listener to watch for value changes.
