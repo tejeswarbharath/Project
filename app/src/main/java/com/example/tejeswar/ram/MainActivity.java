@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new MainActivityFragment(), FORECASTFRAGMENT_TAG)
-                    .commit();
-        }
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction()
+//                    .add(R.id.container, new MainActivityFragment(), FORECASTFRAGMENT_TAG)
+//                    .commit();
+//        }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

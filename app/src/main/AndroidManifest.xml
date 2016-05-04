@@ -41,7 +41,12 @@
         <provider
             android:authorities="com.example.android.sunshine.app"
             android:name=".data.WeatherProvider"/>
-
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.myapp.myauthorities"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>
