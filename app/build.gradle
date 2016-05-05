@@ -5,7 +5,6 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.example.tejeswar.ram"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
@@ -20,6 +19,9 @@ android {
     buildTypes.each {
         it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', '"8f2df8c73c8d06ddd11d57d604c5cb86"'
     }
+}
+android {
+    defaultConfig.applicationId = "com.example.tejeswar.ram"
 }
 
 dependencies {

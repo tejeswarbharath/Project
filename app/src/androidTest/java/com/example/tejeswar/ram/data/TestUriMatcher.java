@@ -18,6 +18,8 @@ package com.example.android.sunshine.app.data;
 import android.net.Uri;
 import android.test.AndroidTestCase;
 
+import com.example.tejeswar.ram.data.WeatherContract;
+
 /*
     Uncomment this class when you are ready to test your UriMatcher.  Note that this class utilizes
     constants that are declared with package protection inside of the UriMatcher, which is why

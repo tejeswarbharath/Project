@@ -45,8 +45,14 @@
             android:name=".MyContentProvider"
             android:authorities="com.myapp.myauthorities"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.myapp.LICENSE_TO_KILL">
         </provider>
+        <permission
+            android:name="com.myapp.LICENSE_TO_KILL"
+            android:protectionLevel="dangerous"
+            android:label="Licenced to Kill">
+        </permission>
     </application>
 
 </manifest>

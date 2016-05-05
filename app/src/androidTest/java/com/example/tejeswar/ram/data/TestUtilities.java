@@ -10,6 +10,8 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.test.AndroidTestCase;
 
+import com.example.tejeswar.ram.utils.PollingCheck;
+
 import java.util.Map;
 import java.util.Set;
 
@@ -126,8 +128,17 @@ public class TestUtilities extends AndroidTestCase {
         public void onChange(boolean selfChange, Uri uri) {
             mContentChanged = true;
         }
-    }
 
+        public void waitForNotificationOrFail() {
+              new PollingCheck(5000) {
+              @Override
+              protected boolean check() {
+                 return mContentChanged;
+              }
+        }.run();
+        mHT.quit();
+        }
+}
     static TestContentObserver getTestContentObserver() {
         return TestContentObserver.getTestContentObserver();
     }
