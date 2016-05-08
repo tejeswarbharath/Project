@@ -173,12 +173,6 @@ public class TestProvider extends AndroidTestCase {
                 WeatherContract.LocationEntry.CONTENT_TYPE, type);
     }
 
-
-    /*
-        This test uses the database directly to insert and then uses the ContentProvider to
-        read out the data.  Uncomment this test to see if the basic weather query functionality
-        given in the ContentProvider is working correctly.
-     */
     public void testBasicWeatherQuery() {
         // insert our test records into the database
         WeatherDbHelper dbHelper = new WeatherDbHelper(mContext);

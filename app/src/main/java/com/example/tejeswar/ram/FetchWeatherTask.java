@@ -1,21 +1,6 @@
 package com.example.tejeswar.ram;
 
 
-/*
- * Copyright (C) 2014 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
@@ -41,15 +26,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Vector;
 
 public class FetchWeatherTask extends AsyncTask<String, Void,Void> {
 
     private final String LOG_TAG = FetchWeatherTask.class.getSimpleName();
-
-    private ArrayAdapter<String> mForecastAdapter;
     private final Context mContext;
 
     public FetchWeatherTask(Context context) {
@@ -58,20 +39,6 @@ public class FetchWeatherTask extends AsyncTask<String, Void,Void> {
 
     private boolean DEBUG = true;
 
-    /* The date/time conversion code is going to be moved outside the asynctask later,
-     * so for convenience we're breaking it out into its own method now.
-     */
-//    private String getReadableDateString(long time){
-//        // Because the API returns a unix timestamp (measured in seconds),
-//        // it must be converted to milliseconds in order to be converted to valid date.
-//        Date date = new Date(time);
-//        SimpleDateFormat format = new SimpleDateFormat("E, MMM d");
-//        return format.format(date).toString();
-//    }
-//
-//    /**
-//     * Prepare the weather high/lows for presentation.
-//     */
     long addLocation(String locationSetting, String cityName, double lat, double lon) {
         long locationId;
 
@@ -117,14 +84,6 @@ public class FetchWeatherTask extends AsyncTask<String, Void,Void> {
     private void getWeatherDataFromJson(String forecastJsonStr,
                                             String locationSetting)
             throws JSONException {
-
-        // Now we have a String representing the complete forecast in JSON Format.
-        // Fortunately parsing is easy:  constructor takes the JSON string and converts it
-        // into an Object hierarchy for us.
-
-        // These are the names of the JSON objects that need to be extracted.
-
-        // Location information
         final String OWM_CITY = "city";
         final String OWM_CITY_NAME = "name";
         final String OWM_COORD = "coord";
