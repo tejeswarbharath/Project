@@ -18,7 +18,17 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        if (savedInstanceState == null) {
+            Bundle arguments = new Bundle();
+            arguments.putParcelable(DetailActivityFragment.DETAIL_URI, getIntent().getData());
 
+            DetailActivityFragment fragment = new DetailActivityFragment();
+            fragment.setArguments(arguments);
+
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.weather_detail_container, fragment)
+                    .commit();
+        }
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
