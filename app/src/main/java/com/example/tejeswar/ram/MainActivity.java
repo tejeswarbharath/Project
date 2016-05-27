@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityFragm
         super.onCreate(savedInstanceState);
         mLocation = Utility.getPreferredLocation(this);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
         if (findViewById(R.id.weather_detail_container) != null) {
             // The detail container view will be present only in the large-screen layouts
             // (res/layout-sw600dp). If this view is present, then the activity should be
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityFragm
             }
         } else {
             mTwoPane = false;
-            getSupportActionBar().setElevation(0f);
+ //           getSupportActionBar().setElevation(0f);
         }
         MainActivityFragment forecastFragment =  ((MainActivityFragment)getSupportFragmentManager()
                 .findFragmentById(R.id.fragment_forecast));

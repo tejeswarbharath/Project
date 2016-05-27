@@ -1,0 +1,61 @@
+{
+  "project_info": {
+    "project_number": "5670127844",
+    "project_id": "sunshine-641e7"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5670127844:android:83b792e26f07bf18",
+        "android_client_info": {
+          "package_name": "com.example.android.sunshine.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-3YagizF6Y08ixMEvisHy-a396P3WjPg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5670127844:android:78e0bff010de46e4",
+        "android_client_info": {
+          "package_name": "com.example.tejeswar.ram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-3YagizF6Y08ixMEvisHy-a396P3WjPg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
